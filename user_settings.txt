@@ -1,0 +1,1 @@
+[{"playerName": "Donald Trump", "score": 345, "awards": ["OR", "NV", "NY"]}, {"playerName": "Clinton Hillary", "score": 346, "awards": ["WT", "TX", "MI"]}, {"playerName": "Alex Ivanov", "score": 347, "awards": ["TO", "MO", "NO"]}]
