@@ -1,18 +1,16 @@
 # check ip
 
 import re
-ip = 0
-msg = ""
 
-msg = input("Enter IP: ")
-ip = str(msg)
-
-check = r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$"
+ip = input("Enter IP: ")
+check = r"^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+# Simple regex to check for an IP address: ^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$
 results = re.match(check, ip)
 
-if results != None:
-    print("IP address " + results.group() + " is OK")
+while results == None:
+    print("IP address " + ip + " is invalid!")
+    ip = input("Enter IP: ")
+    results = re.match(check, ip)
 else:
-    print("IP address " + msg + " is invalid")
-
+    print("IP address " + results.group() + " is OK")
 
